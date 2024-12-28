@@ -1,0 +1,28 @@
+[
+  {
+    "id": 0,
+    "name": "John Doe",
+    "borrowHistory": [
+      {
+        "bookId": 0,
+        "borrowDate": "2020-01-01",
+        "returnDate": "2020-01-15"
+      }
+    ],
+    "currentlyBorrowed": [
+      {
+        "bookId": 1,
+        "borrowDate": "2020-01-01",
+        "returnDueDate": "2020-01-15"
+      }
+    ],
+    "borrowedCount": 1
+  },
+  {
+    "id": 1,
+    "name": "Jane Doe",
+    "borrowHistory": [],
+    "currentlyBorrowed": [],
+    "borrowedCount": 0
+  }
+]
