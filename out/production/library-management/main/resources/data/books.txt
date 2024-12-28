@@ -1,2 +1,0 @@
-0,The Hobbit,J. R. R. Tolkien,Fantasy,978-0618260300,true,2025-12-25
-1,Harry Potter,J. K. Rowling,Fantasy,978-0747532745,true,2023-12-25
