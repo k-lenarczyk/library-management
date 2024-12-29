@@ -1,7 +1,6 @@
 CREATE TABLE members (
-    id INTEGER PRIMARY KEY UNIQUE,
-    name TEXT NOT NULL,
-    borrowedCount INTEGER NOT NULL
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
 );
 
 CREATE TABLE borrowHistory (
@@ -9,7 +8,8 @@ CREATE TABLE borrowHistory (
     bookId INTEGER,
     borrowDate TEXT,
     returnDate TEXT,
-    FOREIGN KEY (memberId) REFERENCES members (id)
+    FOREIGN KEY (memberId) REFERENCES members (id),
+    FOREIGN KEY (bookId) REFERENCES books (id)
 );
 
 CREATE TABLE currentlyBorrowed (
@@ -17,5 +17,6 @@ CREATE TABLE currentlyBorrowed (
     bookId INTEGER,
     borrowDate TEXT,
     returnDueDate TEXT,
-    FOREIGN KEY (memberId) REFERENCES members (id)
+    FOREIGN KEY (memberId) REFERENCES members (id),
+    FOREIGN KEY (bookId) REFERENCES books (id)
 );

@@ -48,7 +48,6 @@ public class BookDAO {
       pstmt.setInt(8, book.getId());
 
       pstmt.executeUpdate();
-      System.out.println("\nBook updated successfully.\n");
     } catch (SQLException e) {
       System.out.println("\nError updating book.\n");
       e.printStackTrace();

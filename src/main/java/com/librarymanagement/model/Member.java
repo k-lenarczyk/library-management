@@ -2,7 +2,7 @@ package com.librarymanagement.model;
 
 public class Member {
 
-  private final int id;
+  private int id;
   private String name;
 
   public Member(int id, String name) {
@@ -12,6 +12,10 @@ public class Member {
 
   public int getId() {
     return id;
+  }
+
+  public void setId(int id){
+    this.id = id;
   }
 
   public String getName() {

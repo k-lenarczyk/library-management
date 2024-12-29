@@ -27,11 +27,19 @@ public class UserDAO {
     String query = "INSERT INTO members (name) VALUES (?)";
 
     try (Connection conn = DriverManager.getConnection(DATABASE_URL);
-         PreparedStatement pstmt = conn.prepareStatement(query)) {
+         PreparedStatement pstmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
 
       pstmt.setString(1, member.getName());
-
       pstmt.executeUpdate();
+
+      try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
+        if (generatedKeys.next()) {
+          int generatedId = generatedKeys.getInt(1);
+          member.setId(generatedId);
+        } else {
+          System.out.println("\nMember registered successfully, but no ID was returned.\n");
+        }
+      }
       System.out.println("\nMember registered successfully.\n");
     } catch (SQLException e) {
       System.out.println("\nError registering member.\n");

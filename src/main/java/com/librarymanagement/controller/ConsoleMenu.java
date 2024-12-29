@@ -70,8 +70,8 @@ public class ConsoleMenu {
       System.out.println("1. Add Book");
       System.out.println("2. Update Book");
       System.out.println("3. Delete Book");
-      System.out.println("4. View Overdue Books");
-      System.out.println("5. View All Books");
+      System.out.println("4. View All Books");
+      System.out.println("5. View Overdue Books");
       System.out.println("6. View All Members");
       System.out.println("7. Delete Member");
       System.out.println("8. Logout");
@@ -98,10 +98,10 @@ public class ConsoleMenu {
           bookService.deleteBook();
           break;
         case 4:
-          bookService.viewOverdueBooks();
+          bookService.viewAllBooks();
           break;
         case 5:
-          bookService.viewAllBooks();
+          bookService.viewOverdueBooks();
           break;
         case 6:
           userService.viewAllMembers();

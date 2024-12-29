@@ -15,7 +15,7 @@ books, members, and borrowing activities efficiently.
 
 ## Features
 - Manage books (add, update, delete, search).
-- Manage members (registration, update, delete).
+- Manage members (register, delete).
 - Track borrowing and returning of books.
 - Tracking overdue books.
 - User-friendly console interface.
@@ -44,10 +44,10 @@ books, members, and borrowing activities efficiently.
 
 ---
 
-# Usage Instructions (Update)
+# Usage Instructions
 1. Start the application:
     ```bash
-    java -jar library-management-system.jar
+    java -jar library-management.jar
 2. Login with librarian credentials (Enter Id: 0).
 3. Use the menus to perform operations:
    - Add or search books.
@@ -68,7 +68,7 @@ The repository contains a sample SQLite database (library.db) with the following
 
 ---
 
-# Project Structure (Update)
+# Project Structure
 
 ```plaintext
 src/

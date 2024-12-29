@@ -39,6 +39,12 @@ public class UserService {
 
     Member member = new Member(-1, name);
     userDAO.addMember(member);
+
+    if(member.getId() == -1) {
+      System.out.println("\nMember registered successfully, but no ID was returned.\n");
+      return;
+    }
+    System.out.println("Your Member ID is: " + member.getId() + "\nRemember it!\n");
   }
 
   // Delete a member
